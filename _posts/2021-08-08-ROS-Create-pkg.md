@@ -25,7 +25,7 @@ qt creator를 설치하는 방법은 다음 [링크](https://ros-qtc-plugin.read
 
  나는 일단 PC나 노트북이 아닌 Jetson Nano에서 ROS 작업을 하길 원했다. 하지만 여기서(벌써?) 한 가지 문제점에 부딪히고 말았다. 먼저 위의 링크에서 설명하는 데로 Jetson Nano의 Ubuntu 버전에 맞는 인스톨러를 다운로드하였다. 하지만 실행이 되지 않았다.
 
-![ros-create-pkg1](/assets/ros-create-pkg/ros-create-pkg1.png){: .align-center}
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg1.png){: .align-center}
 
 invalid encoding 이라는데 대충 구글링을 해보니 32비트 64비트 같은 여하튼 귀찮은 문제인 듯싶었다. 모자란 구글링, 영어 실력을 탓하며 qt creator를 포기해야 했고, 다른 방법을 찾아야 했다.
 
