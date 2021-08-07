@@ -4,9 +4,8 @@ permalink: /about/
 layout: single
 ---
 
-# msjun23.github.io Blog
 <center>Hello and nice to meet you. Thack you for coming! My name is Seokjun Moon.
-
+<br></br>
 방문해주셔서 감사합니다! 저는 문석준이고 아래와 같은 사람입니다.</center>
 
 ## Introduction
