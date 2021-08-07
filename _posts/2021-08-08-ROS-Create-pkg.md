@@ -73,6 +73,7 @@ $ catkin_create_pkg [패키지이름] [의존패키지1] [의존패키지2]
 실제로 패키지를 생성해 보겠다.
 
 ![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg3.png){: .align-center}
+
 ![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg4.png){: .align-center}
 
 ```
@@ -91,7 +92,9 @@ $ catkin_create_pkg ros_tutorial1_pkg std_msgs roscpp
  예제 파일을 생성한다. publisher.cpp, subscriber.cpp 두 개를 생성하겠다. publish, subscribe 등의 개념적인 부분은 여기선 기술하지 않겠다. 간단히만 말하면 publisher가 뿌려주면 subscriber가 받는다. 아래 예제를 보고 확인하자. 두 cpp 파일의 생성 위치는 catkin\_ws/src/ros\_tutorial1\_pkg/src/이다. (catkin\_ws2랑 catkin\_ws랑 왔다 갔다 하는데 그렇게 중요한 건 아니니 그냥 넘어가자..)
 
 ![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg5.png){: .align-center}
+
 ![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg6.png){: .align-center}
+
 ![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg7.png){: .align-center}
 
 cpp 파일을 만들었다고 끝이 아니다. 제대로 끝마치기 위해선 패키지 폴더 안에 있는 CMakeLists.txt를 수정해야 한다.
