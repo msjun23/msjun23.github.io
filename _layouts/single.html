@@ -31,7 +31,9 @@ layout: default
           </h1>{% endif %}
           <!--{% include page__meta.html %}-->
           {% if page.date %}
+          <span style="font-size: small">
           <p class="page__date"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }} <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
+          </span>
           {% endif %}
         </header>
       {% endunless %}
