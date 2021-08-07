@@ -1,5 +1,5 @@
 ---
-title: "About msjun"
+title: "About Moon Seokjun"
 permalink: /about/
 layout: single
 ---
