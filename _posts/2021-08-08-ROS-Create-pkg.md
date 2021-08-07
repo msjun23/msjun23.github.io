@@ -62,9 +62,7 @@ $ source ~/catkin_ws/devel/setup.bash
 
  위에서 생성한 작업 공간을 VSCode에서 열어보면 다음과 같을 것이다. 위와 같이 터미널을 사용하지 않고 처음부터 VSCode에서 폴더나 파일을 만들어도 상관은 없다. 참고로 세세한 폴더명이나 위치 등은 알아서 잘 정리하길 바란다. 나는 catkin\_ws2로 작업 공간 이름을 정했고, 위치는 home/Documents/ros/catkin\_ws2로 했다.
 
-<center>
-<img src="\assets\images\ros-create-pkg\ros-create-pkg2.png">
-</center>
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg2.png){: .align-center}
 
 이제 src 폴더 내에 패키지를 생성할 것이다. 패키지 생성 명령어는 아래와 같다.
 
@@ -74,7 +72,8 @@ $ catkin_create_pkg [패키지이름] [의존패키지1] [의존패키지2]
 
 실제로 패키지를 생성해 보겠다.
 
-[##_Image|kage@b03p3m/btqWc9NsmyC/Ix70BocWjzfNGNcKPa9AT0/img.png|alignCenter|data-origin-width="1615" data-origin-height="1026" data-ke-mobilestyle="widthContent"|||_##][##_Image|kage@beUMe1/btqVV2QxBzl/LkmngzKXR0I8kkKo6T4YC1/img.png|alignCenter|data-origin-width="351" data-origin-height="255" data-ke-mobilestyle="widthContent"|||_##]
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg3.png){: .align-center}
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg4.png){: .align-center}
 
 ```
 $ catkin_create_pkg ros_tutorial1_pkg std_msgs roscpp
@@ -91,11 +90,13 @@ $ catkin_create_pkg ros_tutorial1_pkg std_msgs roscpp
 
  예제 파일을 생성한다. publisher.cpp, subscriber.cpp 두 개를 생성하겠다. publish, subscribe 등의 개념적인 부분은 여기선 기술하지 않겠다. 간단히만 말하면 publisher가 뿌려주면 subscriber가 받는다. 아래 예제를 보고 확인하자. 두 cpp 파일의 생성 위치는 catkin\_ws/src/ros\_tutorial1\_pkg/src/이다. (catkin\_ws2랑 catkin\_ws랑 왔다 갔다 하는데 그렇게 중요한 건 아니니 그냥 넘어가자..)
 
-[##_Image|kage@dgmgCx/btqV09VyfTH/8Pzj0Jod6CtqZrk0qmKRRk/img.png|alignCenter|data-origin-width="348" data-origin-height="296" data-ke-mobilestyle="widthContent"|||_##][##_Image|kage@v0HYG/btqV08WJah6/r4Ha5sKAnmIeJfaKGFvP51/img.png|alignCenter|data-origin-width="828" data-origin-height="543" data-ke-mobilestyle="widthContent"|||_##][##_Image|kage@bdws0e/btqV35kFb1o/AIucpjrrSukT1qUNNoQfy1/img.png|alignCenter|data-origin-width="714" data-origin-height="415" data-ke-mobilestyle="widthContent"|||_##]
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg5.png){: .align-center}
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg6.png){: .align-center}
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg7.png){: .align-center}
 
 cpp 파일을 만들었다고 끝이 아니다. 제대로 끝마치기 위해선 패키지 폴더 안에 있는 CMakeLists.txt를 수정해야 한다.
 
-[##_Image|kage@eiDJdG/btqVZSGOpTF/Dn2FqWLllL040XxmJRr8O0/img.png|alignCenter|data-origin-width="1615" data-origin-height="1026" data-ke-mobilestyle="widthContent"|||_##]
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg8.png){: .align-center}
 
 위와 같이 add\_executable부분과 target\_link부분을 추가해준다.
 
@@ -122,12 +123,12 @@ add\_executable에서는 노드의 이름을 설정해주고, 뒤 쪽에는 해�
 $ catkin_make
 ```
 
-[##_Image|kage@3CdCn/btqV8Fy71qj/1UiCkbx8LawVo2drH7lgJ1/img.png|alignCenter|data-origin-width="1615" data-origin-height="1026" data-ke-mobilestyle="widthContent"|||_##]
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg9.png){: .align-center}
 
 VSCode 터미널에서 별다른 에러 없이 빌드를 성공했다. qt creator에서 빌드를 진행하면 각 cpp 파일 헤더 부분의 빨간 줄이 사라지고 깔끔해지는데 여기서는 빌드를 해도 빨간 줄이 남아있다. 왜 그런지는 모르겠지만 노드를 실행하는 데는 문제가 없었다.
 
 ## **4\. 실행 결과**
 
-[##_Image|kage@s6hFW/btqV08WJp5D/33gJm0F6oY4H8ZAxqGwbIk/img.png|alignCenter|data-origin-width="1680" data-origin-height="1050" data-ke-mobilestyle="widthContent"|||_##]
+![ros-create-pkg1](/assets/images/ros-create-pkg/ros-create-pkg10.png){: .align-center}
 
  publisher와 subscriber가 잘 작동하는 것을 볼 수 있다.
