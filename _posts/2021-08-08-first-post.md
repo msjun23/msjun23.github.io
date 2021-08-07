@@ -2,6 +2,7 @@
 title: "github.io blog is started!"
 excerpt: "Let's start my special Github Blog"
 toc: true
+toc_sticky: true
 categories:
   - Blog
 tag:
