@@ -7,7 +7,7 @@ tag:
   - ROS
   - Installation
   - Jetson nano
-last_modified_at: 2021-08-08T01:40-02:00
+last_modified_at: 2021-08-08T03:10-04:00
 ---
 
 **ROS 설치 공식 문서는 해당 [링크](http://wiki.ros.org/melodic/Installation/Ubuntu)에서 확인할 수 있다.**
