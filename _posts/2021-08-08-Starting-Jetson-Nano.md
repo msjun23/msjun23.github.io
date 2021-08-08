@@ -12,29 +12,17 @@ last_modified_at: 2021-08-08T12:30-13:00
 
 Jetson Nano Developer Kit는 Image classification, object detection, segementation, 그리고 speech processing 등 다양한 뉴럴 네트워크를 병렬로 처리할 수 있는 작고 강력한 컴퓨터이다. 이 컴퓨터는 마이크로 유에스비 단자로도 파워 공급이 가능하며, 5와트의 전력으로도 작동한다.
 
-[##_Image|kage@bpIdVM/btqIPRFwm1Q/HgSzLiIQkBzR9qSnZ9UAuk/img.jpg|alignCenter|data-origin-width="1200" data-origin-height="979" width="395" height="NaN" data-ke-mobilestyle="widthContent"|||_##]
+![starting-jetson-nano1](/assets/images/starting-jetson-nano/starting-jetson-nano1.jpg){: .align-center}
 
 마이크로SD 카드에 시스템 이미지를 삽입하는 것으로 해당 키트를 부팅할 수 있다. 시스템 이미지를 삽입하는 방법은 윈도우, 리눅스, 맥 모두 가능하며 하단 링크를 따라 Jetson Nano에서 Ubuntu 18.04를 부팅할 수 있을 것이다.
 
-[starting-jetson-nano1](/assets/images/starting-jetson-nano/starting-jetson-nano1.jpg){: .align-center}
-
-[
-
-Getting Started With Jetson Nano Developer Kit
-
-The NVIDIA® Jetson Nano™ Developer Kit is a small AI computer for makers, learners, and developers. After following along with this brief guide, you’ll be ready to start building practical AI applications, cool AI robots, and more.
-
-developer.nvidia.com
-
-
-
-](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)
+[developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit](https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit)
 
 마지막 스텝에선 다양한 Jetson Nano Tutorial들을 확인할 수 있다.
 
 추가로 Jetson Nano Developer Kit는 이전 버전인 A02와 최신 버전인 B01 두가지가 있다. 버전에 따라 세부 핀이 다르고 카메라 연결 가능 갯수도 다르기에 구매시 이를 확인하는 것이 좋다.
 
-[starting-jetson-nano2](/assets/images/starting-jetson-nano/starting-jetson-nano2.png){: .align-center}
+![starting-jetson-nano2](/assets/images/starting-jetson-nano/starting-jetson-nano2.png){: .align-center}
 
 ---
 
