@@ -16,7 +16,7 @@ Jetson Nano Developer Kit는 Image classification, object detection, segementati
 
 마이크로SD 카드에 시스템 이미지를 삽입하는 것으로 해당 키트를 부팅할 수 있다. 시스템 이미지를 삽입하는 방법은 윈도우, 리눅스, 맥 모두 가능하며 하단 링크를 따라 Jetson Nano에서 Ubuntu 18.04를 부팅할 수 있을 것이다.
 
-[starting-jetson-nano1](/assets/images/starting-jetson-nano1/starting-jetson-nano1.jpg){: .align-center}
+[starting-jetson-nano1](/assets/images/starting-jetson-nano/starting-jetson-nano1.jpg){: .align-center}
 
 [
 
@@ -34,7 +34,7 @@ developer.nvidia.com
 
 추가로 Jetson Nano Developer Kit는 이전 버전인 A02와 최신 버전인 B01 두가지가 있다. 버전에 따라 세부 핀이 다르고 카메라 연결 가능 갯수도 다르기에 구매시 이를 확인하는 것이 좋다.
 
-[starting-jetson-nano2](/assets/images/starting-jetson-nano2/starting-jetson-nano2.png){: .align-center}
+[starting-jetson-nano2](/assets/images/starting-jetson-nano/starting-jetson-nano2.png){: .align-center}
 
 ---
 
