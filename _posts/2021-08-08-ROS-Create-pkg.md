@@ -7,7 +7,7 @@ categories:
   - ROS
 tag:
   - ROS
-  - Package
+  - ROS package
   - Jetson Nano
   - qt creator
 last_modified_at: 2021-08-08T05:10-06:00
