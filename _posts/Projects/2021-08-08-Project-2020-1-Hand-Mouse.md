@@ -1,3 +1,4 @@
+---
 title: "Virtual Mouse using Hand Detection"
 excerpt: "2020 상반기 바람 프로젝트"
 toc: true
