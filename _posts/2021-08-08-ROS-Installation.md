@@ -8,7 +8,7 @@ categories:
 tag:
   - ROS
   - Installation
-  - Jetson nano
+  - Jetson Nano
 last_modified_at: 2021-08-08T03:10-04:00
 ---
 
