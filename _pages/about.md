@@ -6,7 +6,7 @@ layout: single
 
 <center>
 <span style="font-size: medium">
-  Hello and nice to meet you. Thack you for coming!
+  Hello and nice to meet you. Thanks for coming!
   <br>
   My name is Seokjun Moon.
   <br>
