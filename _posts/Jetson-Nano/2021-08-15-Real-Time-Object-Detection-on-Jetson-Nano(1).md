@@ -22,11 +22,10 @@ Jetson Nano에서 간단한 Object Detecion 예제를 실행해 보겠다. 다�
 -   For those interested in training their own networks, take the full Two Days to a Demo which includes both training and inference.
 
 ---
-​
-### Jetson-Inference
-​
-먼저 jetson-inference를 설치해야 한다.
 
+### Jetson-Inference
+
+먼저 jetson-inference를 설치해야 한다.
 
 <br>1\. git과 cmake가 정상적으로 Jetson 보드에 설치돼 있는지 확인한다.
 
