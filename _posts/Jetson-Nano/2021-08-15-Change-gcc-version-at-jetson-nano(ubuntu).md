@@ -91,7 +91,6 @@ $ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 70
 <br>
 
 이제 다시 한번 alternatives를 확인해보면 아래와 같이 뜰 것이다.
-각 인자가 의미하는 것은 다음과 같다.
 ![change-gcc-version-at-jetson-nano(ubuntu)3](/assets/images/change-gcc-version-at-jetson-nano(ubuntu)/change-gcc-version-at-jetson-nano(ubuntu)3.png)
 
 <br>
