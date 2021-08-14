@@ -14,7 +14,7 @@ last_modified_at: 2021-08-15T01:00-01:30
 
 Jetson Nano에서 간단한 Object Detecion 예제를 실행해 보겠다. 다음은 NVIDIA 사이트에 있는 Hello AI World라는 Jetson 프로젝트의 설명이다.
 ​
-**[Hello AI World](https://developer.nvidia.com/embedded/twodaystoademo#hello_ai_world)**
+<br>**[Hello AI World](https://developer.nvidia.com/embedded/twodaystoademo#hello_ai_world)**
 ​
 -   Get started with deep learning inference for computer vision using pretrained models for image classification and object detection.
 -   Realtime acceleration with TensorRT and live camera streaming.
