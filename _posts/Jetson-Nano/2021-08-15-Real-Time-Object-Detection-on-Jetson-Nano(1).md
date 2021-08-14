@@ -20,7 +20,7 @@ Jetson Nano에서 간단한 Object Detecion 예제를 실행해 보겠다. 다�
 -   Realtime acceleration with TensorRT and live camera streaming.
 -   Code your own recognition program in C++.
 -   For those interested in training their own networks, take the full Two Days to a Demo which includes both training and inference.
-​
+
 ---
 ​
 ### Jetson-Inference
