@@ -42,7 +42,7 @@ last_modified_at: 2021-08-27T14:30-15:00
 # 2. Problem
 우선순위 기반 경로 계획은 다음과 같은 상황에서 적절한 solution을 찾지 못한다.
 
-![Paper-Review-MRRP1](/assets/images/Paper-Review-MRRP/Paper-Review-MRRP1.png){: .align-center}
+![Paper-Review-MRRP1](/assets/images/Paper-Review-MRRP/Paper-Review-MRRP1.PNG){: .align-center}
 
 위와 같은 상황은 충분히 마주할 수 있는 상황이고, 극복해야할 필요성이 있다. 이를 위해서, ***wait, avoid, push***와 같은 특수한 명령이 요구된다. 본 논문은 위와 같이 일반적인 우선순위 경로 계획법으로 해결하지 못하는 상황을 해결하는데 초점을 둔다.
 
