@@ -51,7 +51,7 @@ Fig. 1에서 제기된 4가지 상황은 모두 시간 의존적(time-dependent)
 <br>
 
 # 3. Main Approach
-기존에 통용되던 우선순위 기반 경로 계획 알고리즘은 Fig.1과 같은 문제를 적절히 해결할 수 없었다. 이번 챕터에서는 다음과 같은 순서로 주어진 문제 해결법을 제시한다.
+기존에 통용되던 우선순위 기반 경로 계획 알고리즘은 Fig.1과 같은 문제를 적절히 해결할 수 없었다. 본 논문은 다음과 같은 순서로 주어진 문제 해결법을 제시한다.
 > 1. Terminology
 > 2. Data structure
 > 3. Planner
@@ -66,7 +66,7 @@ Fig. 1에서 제기된 4가지 상황은 모두 시간 의존적(time-dependent)
 
 각각의 로봇들은 자신만의 Single Robot Router(SRR)를 수행한다. 이들은 각각 최종 route의 후보자가 된다. 모든 로봇들은 자신의 progress를 주기적으로(at low frequency, ~1Hz)로 공유하고, 이를 통해 로봇들간의 동기화(sychronization)를 이룰 수 있다.
 
-최종적으로 맵이 만들어졌을 때 MRR은 그래프에 기반한다.이 그래프는 V_0...V_n 까지의 vertex로 구성되고 각각은 위치 가능한 공간(accessible environment)임을 나타낸다. 특정 vertex에 로봇이 위치한다는 것은 체크 포인트(check point)에 도달했다는 것이다.
+최종적으로 맵이 만들어졌을 때 MRR은 그래프에 기반한다.이 그래프는 $V_0...V_n$ 까지의 vertex로 구성되고 각각은 위치 가능한 공간(accessible environment)임을 나타낸다. 특정 vertex에 로봇이 위치한다는 것은 체크 포인트(check point)에 도달했다는 것이다.
 
 ## 3-2. Preconditions
 - 주변 환경(environment)
@@ -77,4 +77,32 @@ Fig. 1에서 제기된 4가지 상황은 모두 시간 의존적(time-dependent)
 
 플래너(planner)의 task를 줄이고, 충돌을 방지하기 위해 모든 세그먼트(segment)는 로봇들의 사이즈보다 커야하는 것은 당연하다. 또한 각각의 로봇들은 한 시간 단위에 하나의 포인트를 점유해야 하고, 이와 같은 전제조건은 Fig. 1과 같은 상황에서 시간을 고려한 알고리즘을 구현할 수 있게 해준다.
 
-##
+## 3-3. Framework and Structure
+MRR은 기본적으로 SRR 위에 성립된다. 
+
+![Paper-Review-MRRP2](/assets/images/Paper-Review-MRRP/Paper-Review-MRRP2.PNG){: .align-center}
+
+위 다이어그램과 같이 각 로봇은 자신보다 우선순위가 높은 로봇의 경로를 방해하지 않도록 경로를 계획하고, 이를 바탕으로 MRR을 수행한다. 이때 사용되는 것이 ***route coordinator***라는 개념이다. Route coordinator는 현재 경로를 유지했을 때 발생 가능한 충돌을 예측하고 ***Collision Resolver***를 통해 새로운 경로를 계획한다.
+
+이후 SRR이 완료되면, 즉 한 로봇의 경로가 확정되면 이를 전체 루트와 동기화를 시킨다. 이것이 위에서 언급한 ***routing table***이다.
+
+## 3-4.Collision Resolver
+예견된 충돌을 피하기 위해 경로를 수정하는 것이 Collision resolver의 역할이다. Collision resolver는 기존의 그래프 맵을 복사하여 새로운 그래프 맵에 대해 고려한다. 논문에서는 그래프를 확장(***potential expander***)한다고 표현했다.
+
+![Paper-Review-MRRP3](/assets/images/Paper-Review-MRRP/Paper-Review-MRRP3.PNG){: .align-center}
+
+보다 정확한 회피 알고리즘은 다음과 같다.
+
+### 3-4-1. Wait
+말 그대로 다른 로봇이 특정 지역을 지날 때까지 기다리는 전략이다. 
+
+![Paper-Review-MRRP4](/assets/images/Paper-Review-MRRP/Paper-Review-MRRP4.PNG){: .align-center}
+
+Fig. 4. (a)에서 알 수 있듯이 서로 그전 자신의 목표를 향해 이동한다면 충돌이 발생하게 된다. 경로를 계획하는 시점에서 백트래킹 과정을 거치며 이와 같은 충돌 여부를 검사한다. 만일 충돌이 예상된다면 Collision resolver가 호출된다. Collision resolver는 Fig.4. (b)와 같이 확장된 그래프를 통해 '기다리는' 행동을 취한다. 그와 동시에 우선순위가 높은 $r_0$가 먼저 자신의 목표에 도달할 수 있게된다.
+
+### 3-4-2. Avoid
+우선순위가 낮은 로봇이 우선순위가 높은 로봇의 경로를 피해가는 전략이다.
+
+![Paper-Review-MRRP5](/assets/images/Paper-Review-MRRP/Paper-Review-MRRP5.PNG){: .align-center}
+
+Fig. 5의 경우에는 Wait 만으로는 아무도 목적지에 도달할 수 없다.
