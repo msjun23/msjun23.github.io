@@ -66,7 +66,7 @@ Fig. 1에서 제기된 4가지 상황은 모두 시간 의존적(time-dependent)
 
 각각의 로봇들은 자신만의 Single Robot Router(SRR)를 수행한다. 이들은 각각 최종 route의 후보자가 된다. 모든 로봇들은 자신의 progress를 주기적으로(at low frequency, ~1Hz)로 공유하고, 이를 통해 로봇들간의 동기화(sychronization)를 이룰 수 있다.
 
-최종적으로 맵이 만들어졌을 때 MRR은 그래프에 기반한다.이 그래프는 $V_0...V_n$ 까지의 vertex로 구성되고 각각은 위치 가능한 공간(accessible environment)임을 나타낸다. 특정 vertex에 로봇이 위치한다는 것은 체크 포인트(check point)에 도달했다는 것이다.
+최종적으로 맵이 만들어졌을 때 MRR은 그래프에 기반한다.이 그래프는 $ V_0...V_n $ 까지의 vertex로 구성되고 각각은 위치 가능한 공간(accessible environment)임을 나타낸다. 특정 vertex에 로봇이 위치한다는 것은 체크 포인트(check point)에 도달했다는 것이다.
 
 ## 3-2. Preconditions
 - 주변 환경(environment)
@@ -98,7 +98,7 @@ MRR은 기본적으로 SRR 위에 성립된다.
 
 ![Paper-Review-MRRP4](/assets/images/Paper-Review-MRRP/Paper-Review-MRRP4.PNG){: .align-center}
 
-Fig. 4. (a)에서 알 수 있듯이 서로 그전 자신의 목표를 향해 이동한다면 충돌이 발생하게 된다. 경로를 계획하는 시점에서 백트래킹 과정을 거치며 이와 같은 충돌 여부를 검사한다. 만일 충돌이 예상된다면 Collision resolver가 호출된다. Collision resolver는 Fig.4. (b)와 같이 확장된 그래프를 통해 '기다리는' 행동을 취한다. 그와 동시에 우선순위가 높은 $r_0$가 먼저 자신의 목표에 도달할 수 있게된다.
+Fig. 4. (a)에서 알 수 있듯이 서로 그전 자신의 목표를 향해 이동한다면 충돌이 발생하게 된다. 경로를 계획하는 시점에서 백트래킹 과정을 거치며 이와 같은 충돌 여부를 검사한다. 만일 충돌이 예상된다면 Collision resolver가 호출된다. Collision resolver는 Fig.4. (b)와 같이 확장된 그래프를 통해 '기다리는' 행동을 취한다. 그와 동시에 우선순위가 높은 $ r_0 $가 먼저 자신의 목표에 도달할 수 있게된다.
 
 ### 3-4-2. Avoid
 우선순위가 낮은 로봇이 우선순위가 높은 로봇의 경로를 피해가는 전략이다.
