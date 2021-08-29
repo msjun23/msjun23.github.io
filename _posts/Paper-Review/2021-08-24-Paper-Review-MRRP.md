@@ -63,3 +63,18 @@ Fig. 1에서 제기된 4가지 상황은 모두 시간 의존적(time-dependent)
 - local path and trajectory controller
 
 본 논문에서는 위의 두 가지 개념을 각각 ***Multi Robot Router(MRR)***, ***local controller***라고 명명한다. MRR은 각 로봇에 대해 병목 현상이 발생하지 않도록 경로를 계획하고 ***routing table***을 작성한다.
+
+각각의 로봇들은 자신만의 Single Robot Router(SRR)를 수행한다. 이들은 각각 최종 route의 후보자가 된다. 모든 로봇들은 자신의 progress를 주기적으로(at low frequency, ~1Hz)로 공유하고, 이를 통해 로봇들간의 동기화(sychronization)를 이룰 수 있다.
+
+최종적으로 맵이 만들어졌을 때 MRR은 그래프에 기반한다.이 그래프는 V_0...V_n 까지의 vertex로 구성되고 각각은 위치 가능한 공간(accessible environment)임을 나타낸다. 특정 vertex에 로봇이 위치한다는 것은 체크 포인트(check point)에 도달했다는 것이다.
+
+## 3-2. Preconditions
+- 주변 환경(environment)
+- 체크 포인트간에 자율 주행을 수행할 수 있는 능력
+- MRR(Multi Robot Router)
+
+이 세가지 요소가 두 웨이 포인트(way point)간의 관계를 정의하는데 사용된다.
+
+플래너(planner)의 task를 줄이고, 충돌을 방지하기 위해 모든 세그먼트(segment)는 로봇들의 사이즈보다 커야하는 것은 당연하다. 또한 각각의 로봇들은 한 시간 단위에 하나의 포인트를 점유해야 하고, 이와 같은 전제조건은 Fig. 1과 같은 상황에서 시간을 고려한 알고리즘을 구현할 수 있게 해준다.
+
+##
