@@ -11,7 +11,7 @@ tag:
   - Path Planning
   - Multi Robot
   - Autonomous Driving
-last_modified_at: 2021-08-27T14:30-15:00
+last_modified_at: 2021-08-31T00:00-00:30
 ---
 
 > Multi Robot Route Planning(MRRP): Extended Spatial-Temporal Prioritized Planning
@@ -167,4 +167,4 @@ Fig. 8 (b)의 경우 우선순위를 바꾸는 것도 도움이 되지 못한다
 
 # Reference
 - B. Binder, F. Beck, F. König and M. Bader, "Multi Robot Route Planning (MRRP): Extended Spatial-Temporal Prioritized Planning," 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), Macau, China, 2019, pp. 4133-4139, doi: 10.1109/IROS40897.2019.8968465
-- http://wiki.ros.org/tuw_multi_robot
+- [ROS tuw_multi_robot](http://wiki.ros.org/tuw_multi_robot)
