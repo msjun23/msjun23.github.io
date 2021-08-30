@@ -11,6 +11,7 @@ tag:
   - Path Planning
   - Multi Robot
   - Autonomous Driving
+use_math: true
 last_modified_at: 2021-08-31T00:00-00:30
 ---
 
