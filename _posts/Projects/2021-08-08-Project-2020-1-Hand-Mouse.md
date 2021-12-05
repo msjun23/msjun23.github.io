@@ -14,7 +14,7 @@ tag:
 last_modified_at: 2021-12-05T18:30-20:00
 ---
 
-**프로젝트 링크:** [github](https://github.com/msjun23/hand-mouse)</br>
+**프로젝트 링크:** [github](https://github.com/msjun23/hand-mouse) </br>
 **진행 기간:** 2020.3월 ~ 7월
 
 해당 프로젝트는 [이 곳](https://github.com/MrEliptik/HandPose)을 참조하여 제가 구현하고자 한 내용을 적용했습니다.
