@@ -43,7 +43,7 @@ last_modified_at: 2021-08-15T01:30-02:00
 
 영상 처리 및 주 프로세싱은 Jetson Nano 보드에서 수행했다. Jetson Nano에 USB 캠을 통해 전방 이미지를 받아오고, ROI(Region Of Interest)를 설정하여 차선을 인식한다. 동시에 Tensorflow API를 사용해 전방에 존재하는 사람이나 자동차를 인식했다.
 
-![slide4](\/assets/images/self-driving-car/slide4.png)
+![slide4](/assets/images/self-driving-car/slide4.png)
 
 그 후, 차량 제어를 위해 양측 차선을 인식하여, 두 차선의 가로축 중앙 픽셀을 목표지점으로 정하고, 캠 이미지의 가로축 중앙 픽셀을 현재 로봇의 위치로 정하여 두 픽셀 값의 차이를 오차로 정의했다.
 
