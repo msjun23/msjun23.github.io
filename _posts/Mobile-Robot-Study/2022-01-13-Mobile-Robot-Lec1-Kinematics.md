@@ -9,6 +9,7 @@ tag:
   - Study
   - Mobile Robot
   - Kinematics
+use_math: true
 last_modified_at: 2022-01-13T00:00-01:00
 ---
 
