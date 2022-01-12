@@ -4,7 +4,7 @@ excerpt: "About Mobile Robot Kinematics"
 toc: true
 toc_sticky: true
 categories:
-  - Study Mobile Robot
+  - Mobile Robot Study
 tag:
   - Study
   - Mobile Robot
@@ -30,3 +30,12 @@ last_modified_at: 2022-01-13T00:00-01:00
 - System Dynamics
 - Disturbance
 - Control Theorem
+
+Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간을 할애하여 언급하지는 않는다. 기본적인 내용이거나, 혹은 제어 이론과 같이 보다 하위단 내용을 파고들고자 한다면 상당히 긴 강의가 될 것이다.
+
+이들에 대한 기본적인 지식이 있다는 가정하에 모바일 로봇 이론에 대해 강의를 진행한다.
+
+# Mobile Robot Kinematics
+
+
+
