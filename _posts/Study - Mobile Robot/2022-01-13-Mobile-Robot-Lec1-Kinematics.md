@@ -4,7 +4,7 @@ excerpt: "About Mobile Robot Kinematics"
 toc: true
 toc_sticky: true
 categories:
-  - Study - Mobile Robot
+  - Study Mobile Robot
 tag:
   - Study
   - Mobile Robot
@@ -23,3 +23,10 @@ last_modified_at: 2022-01-13T00:00-01:00
 모바일 로봇을 공부하기 위해 간단한 모델 하나를 소개하자면 다음과 같은 2-Wheel Robot을 들 수 있다.
 
 ![2wheelrobot](/assets/images/mobile-robot-lec1/2wheelrobot.PNG)
+
+위와 같은 모바일 로봇이 원하는 속도를 가지고 회전과 이동을 수행하기 위해서는 많은 요소가 고려되어야 한다.
+- Moment of Inertia
+- Wheel Dynamics
+- System Dynamics
+- Disturbance
+- Control Theorem
