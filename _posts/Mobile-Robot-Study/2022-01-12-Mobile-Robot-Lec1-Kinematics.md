@@ -10,7 +10,7 @@ tag:
   - Mobile Robot
   - Kinematics
 use_math: true
-last_modified_at: 2022-01-13T00:00-01:00
+last_modified_at: 2022-01-12T23:30-24:00
 ---
 
 > 본 포스팅은 양정연 교수님의 SLAM 수업을 Reference로 공부한 내용을 정리한 것입니다.
