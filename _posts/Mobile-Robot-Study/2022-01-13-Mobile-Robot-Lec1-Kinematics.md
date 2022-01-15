@@ -38,5 +38,12 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 
 # Mobile Robot Kinematics
 
+다음과 같이 간단한 2-Wheel Mobile Robot을 가정해보자.
+
+![2wheelrobot_diagram](/assets/images/mobile-robot-lec1/2wheelrobot_diagram.PNG)
+
+로봇의 중심을 기준으로 좌우, 같은 간격으로 두 개의 바퀴가 위치한다. 이 로봇은 이동할 때 두 바퀴를 굴려 이동할 것이다. 이때 두 바퀴의 선속도를 각각 $v_L, v_R$로 정의했다. 그렇다면 로봇 자체의 선속도는 두 바퀴 선속도의 평균으로 다음과 같이 정의될 것이다.
+
+<center> $v=\frac{v_L+v_R}{2}$ </center>
 
 
