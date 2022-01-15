@@ -58,9 +58,9 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 
 강의자료에서는 로봇의 회전 중심을 $ICC(Instantaneous Center of Curvature)$로 명시했다. 로봇이 $ICC$를 중심으로 회전할 때 양측 바퀴에 위에서 언급한 $v=r\times w$ 식을 적용하면 다음과 같이 로봇의 회전속도 $w$를 도출할 수 있다.
 
-<center> $ v_L=(R-a)\times w, v_R=(R+a)\times w<br>
-         \frac{v_L}{w}+a=\frac{v_R}{w}-a=R<br>
-         2a=\frac{v_R-v_L}{w}<br>
+<center> $ v_L=(R-a)\times w, v_R=(R+a)\times w\\
+         \frac{v_L}{w}+a=\frac{v_R}{w}-a=R\\
+         2a=\frac{v_R-v_L}{w}\\
          \therefore w=\frac{v_R-v_L}{2a} $ </center>
 
 이제 로봇의 병진속도(**Translation**)와 회전속도(**Rotation**)를 알 수 있다.
