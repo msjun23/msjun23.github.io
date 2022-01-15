@@ -91,14 +91,14 @@ w
 \end{pmatrix}=
 \begin{pmatrix}
 \frac{1}{2} & \frac{1}{2} \\\\\\
-\frac{-1}{2a} & \frac{1}{2a} \\\\\\
+\frac{-1}{2a} & \frac{1}{2a} \\\\
 \end{pmatrix}
 \begin{pmatrix}
 v_L \\\\ v_R
 \end{pmatrix}=r
 \begin{pmatrix}
 \frac{1}{2} & \frac{1}{2} \\\\\\
-\frac{-1}{2a} & \frac{1}{2a} \\\\\\
+\frac{-1}{2a} & \frac{1}{2a} \\\\
 \end{pmatrix}
 \begin{pmatrix}
 w_L \\\\ w_R
@@ -135,7 +135,7 @@ w
 \begin{pmatrix}
 cos\theta & 0 \\\\\\
 sin\theta & 0 \\\\
-0 & 1 \\\\
+0 & 1 \\
 \end{pmatrix}
 \begin{pmatrix}
 v \\\\ w
@@ -143,7 +143,17 @@ v \\\\ w
 
 여기서 우변의 $v, w$는 위 식에서 양측 바퀴의 각속도로 얻을 수 있음을 보였다. 이를 모두 정리하면 다음과 같다.
 
-
+$ \dot{X}=
+\begin{pmatrix}
+\dot{x} \\\\\\
+\dot{y} \\\\ 
+\dot{\theta}
+\end{pmatrix}=
+\begin{pmatrix}
+vcos\theta \\\\\\
+vsin\theta \\\\ 
+w
+\end{pmatrix}=$
 
 
 
