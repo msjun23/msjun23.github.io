@@ -112,10 +112,24 @@ w_L \\ w_R
 동시에 위와 같이 월드 좌표계 위에서 로봇의 pose는 현재 로봇의 위치와 회전 각도로 정의할 수 있다.
 <center> $ X=\begin{pmatrix}
 x \\
-y \\ z
+y \\ \theta
 \end{pmatrix} $ </center>
 
+이때 로봇의 pose X를 시간에 대해 미분한 것이 한 시점에서 로봇의 속도, 각속도가 된다. 이는 식으로 나타내면 다음과 같다.
 
+$ \dot{X}=\begin{pmatrix}
+\dot{x} \\
+\dot{y} \\ \dot{\theta}
+\end{pmatrix}=\begin{pmatrix}
+vcos\theta \\
+vsin\theta \\ w
+\end{pmatrix}=\begin{pmatrix}
+cos\theta & 0 \\
+sin\theta & 0 \\
+0 & 1 \\
+\end{pmatrix}\begin{pmatrix}
+v \\ w
+\end{pmatrix} $
 
 
 
