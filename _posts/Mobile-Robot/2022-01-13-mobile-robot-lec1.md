@@ -211,6 +211,21 @@ sin\theta & sin\theta \\\\\\
 w_L \\\\ w_R
 \end{pmatrix} $
 
+$\therefore \dot{X}=
+\begin{pmatrix}
+\dot{x} \\\\\\
+\dot{y} \\\\\\
+\dot{\theta}
+\end{pmatrix}=
+\frac{r}{2}
+\begin{pmatrix}
+cos\theta & cos\theta \\\\\\
+sin\theta & sin\theta \\\\\\
+-\frac{1}{a} & \frac{1}{a} \\\\
+\end{pmatrix}
+\begin{pmatrix}
+w_L \\\\ w_R
+\end{pmatrix} $
 
 
 
