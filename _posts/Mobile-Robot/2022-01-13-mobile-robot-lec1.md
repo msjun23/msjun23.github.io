@@ -252,8 +252,10 @@ d\theta_L \\\\ d\theta_R
 
 이 그림과 같이 주어진 목표로 향하기 위해 회전과 이동을 별개의 액션으로 수행하는 것이다. 회전 -> 이동 -> 회전과 같이 분리된 움직임을 수행한다면 두 바퀴의 각속도는 서로 같거나, 절대값이 같아져 소거되는 항이 생긴다. 이를 활용하면 다음과 같이 쉽게 양측 바퀴의 각속도를 구할 수 있다.
 
-|![RTR_Rotation](/assets/images/mobile-robot-lec1/RTR_Rotation.PNG) | ![RTR_Translation](/assets/images/mobile-robot-lec1/RTR_Translation.PNG)|
-|---|---|
+<p float="left">
+  <img src="/assets/images/mobile-robot-lec1/RTR_Rotation.PNG" width="100" />
+  <img src="/assets/images/mobile-robot-lec1/RTR_Translation.PNG" width="100" /> 
+</p>
 
 ### 5.2 Inverse Kinematics with optimality
 
