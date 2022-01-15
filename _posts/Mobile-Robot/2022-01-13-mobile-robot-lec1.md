@@ -38,7 +38,7 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 
 # Mobile Robot Kinematics
 
-## Translation
+## 1. Translation
 다음과 같이 간단한 2-Wheel Mobile Robot을 가정해보자.
 
 ![2wheelrobot_diagram](/assets/images/mobile-robot-lec1/2wheelrobot_diagram.PNG)
@@ -47,7 +47,7 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 
 <center> $v=\frac{v_L+v_R}{2}$ </center>
 
-## Rotation
+## 2. Rotation
 위 그림과 같은 모바일 로봇은 두 바퀴의 선속도를 다르게 하여 회전 운동을 할 수 있다. 이는 딱히 설명하지 않아도 당연한 것으로 생각된다. 이제는 로봇의 회전속도를 구해볼 필요가 있다. 먼저 다음의 회전속도와 선속도의 기본 공식을 알고 있어야 한다.
 
 <center> $v=r\times w$ </center>
@@ -63,7 +63,63 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 <center> $ 2a=\frac{v_R-v_L}{w} $ </center>
 <center> $ \therefore w=\frac{v_R-v_L}{2a} $ </center>
 
-이제 로봇의 병진속도(**Translation**)와 회전속도(**Rotation**)를 알 수 있다.
+## 3. Differential Drive Kinematics
+이제 로봇의 병진속도(**Translation**)와 회전속도(**Rotation**)를 알아냈다.
+
+두 식에 대해 세 가지 케이스를 나눠 2-Wheel Mobile Robot이 수행할 수 있는 움직임들을 설명할 수 있다.
+
+> **case1)** $ w=\frac{v_R-v_L}{2a}=0 $
+> 
+> $ v=v_L=v_R $ 인 상황이므로, 로봇은 병진운동만을 한다.
+> 
+> **case2)** $ v_L=-v_R $
+>
+> $ w=\frac{v_R}{a}, v=\frac{v_L+v_R}{2}=0 $ 이므로 제자리 회전을 한다.
+>
+> **case3)** $ v_L=0 $
+>
+> $ w=\frac{v_R}{2a}, v=\frac{v_L+v_R}{2}=\frac{v_R}{2} $ 이므로 왼쪽 바퀴를 축으로 회전한다.
+
+---
+
+다음으로 병진속도와 회전속도 식을 행렬을 사용해 표현해보자.
+
+$ \begin{pmatrix}
+v
+ \\
+w
+\end{pmatrix}=\begin{pmatrix}
+\frac{1}{2} & \frac{1}{2} \\
+\frac{-1}{2a} & \frac{1}{2a} \\
+\end{pmatrix}\begin{pmatrix}
+v_L \\ v_R
+\end{pmatrix}=r\begin{pmatrix}
+\frac{1}{2} & \frac{1}{2} \\
+\frac{-1}{2a} & \frac{1}{2a} \\
+\end{pmatrix}\begin{pmatrix}
+w_L \\ w_R
+\end{pmatrix} $
+
+위 식에서 알 수 있는 것은 양측 바퀴의 각속도를 조절하면 로봇의 병진속도와 회전속도를 제어할 수 있다는 것이다.
+
+## 4. Jacobian
+![2wheelrobot_coordinate](/assets/images/mobile-robot-lec1/2wheelrobot_coordinate.PNG)
+
+먼저 로봇의 속도는 다음과 같이 $x$축, $y$축으로 분해하여 표현 가능하다.
+<center> $ v_x=vcos\theta $ </center>
+<center> $ v_y=vsin\theta $ </center>
+
+동시에 위와 같이 월드 좌표계 위에서 로봇의 pose는 현재 로봇의 위치와 회전 각도로 정의할 수 있다.
+<center> $ X=\begin{pmatrix}
+x \\
+y \\ z
+\end{pmatrix} $ </center>
+
+
+
+
+
+
 
 
 
