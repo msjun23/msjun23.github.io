@@ -170,8 +170,8 @@ sin\theta & 0 \\\\
 \begin{pmatrix}
 \frac{v_L+v_R}{2} \\\\\\
 \frac{v_R-v_L}{2a}
-\end{pmatrix}=
-\begin{pmatrix}
+\end{pmatrix} $
+$ =\begin{pmatrix}
 cos\theta & 0 \\\\\\
 sin\theta & 0 \\\\
 0 & 1 \\\\
@@ -191,7 +191,31 @@ sin\theta & sin\theta \\\\
 \end{pmatrix}
 \begin{pmatrix}
 v_L \\\\ v_R
-\end{pmatrix}$
+\end{pmatrix} $
+$ =\frac{1}{2}
+\begin{pmatrix}
+cos\theta & cos\theta \\\\\\
+sin\theta & sin\theta \\\\
+-\frac{1}{a} & \frac{1}{a} \\\\
+\end{pmatrix}
+\begin{pmatrix}
+rw_L \\\\ rw_R
+\end{pmatrix}=
+\frac{r}{2}
+\begin{pmatrix}
+cos\theta & cos\theta \\\\\\
+sin\theta & sin\theta \\\\
+-\frac{1}{a} & \frac{1}{a} \\\\
+\end{pmatrix}
+\begin{pmatrix}
+w_L \\\\ w_R
+\end{pmatrix} $
+
+
+
+
+
+
 
 
 
