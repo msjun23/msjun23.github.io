@@ -146,17 +146,17 @@ v \\\\ w
 $ \dot{X}=
 \begin{pmatrix}
 \dot{x} \\\\\\
-\dot{y} \\\\
+\dot{y} \\\\\\
 \dot{\theta}
 \end{pmatrix}=
 \begin{pmatrix}
 vcos\theta \\\\\\
-vsin\theta \\\\
+vsin\theta \\\\\\
 w
 \end{pmatrix}=
 \begin{pmatrix}
 cos\theta & 0 \\\\\\
-sin\theta & 0 \\\\
+sin\theta & 0 \\\\\\
 0 & 1 \\\\
 \end{pmatrix}
 \begin{pmatrix}
@@ -164,7 +164,7 @@ v \\\\ w
 \end{pmatrix}=
 \begin{pmatrix}
 cos\theta & 0 \\\\\\
-sin\theta & 0 \\\\
+sin\theta & 0 \\\\\\
 0 & 1 \\\\
 \end{pmatrix}
 \begin{pmatrix}
@@ -173,7 +173,7 @@ sin\theta & 0 \\\\
 \end{pmatrix} $
 $ =\begin{pmatrix}
 cos\theta & 0 \\\\\\
-sin\theta & 0 \\\\
+sin\theta & 0 \\\\\\
 0 & 1 \\\\
 \end{pmatrix}
 \begin{pmatrix}
@@ -186,7 +186,7 @@ v_L \\\\ v_R
 \frac{1}{2}
 \begin{pmatrix}
 cos\theta & cos\theta \\\\\\
-sin\theta & sin\theta \\\\
+sin\theta & sin\theta \\\\\\
 -\frac{1}{a} & \frac{1}{a} \\\\
 \end{pmatrix}
 \begin{pmatrix}
@@ -195,7 +195,7 @@ v_L \\\\ v_R
 $ =\frac{1}{2}
 \begin{pmatrix}
 cos\theta & cos\theta \\\\\\
-sin\theta & sin\theta \\\\
+sin\theta & sin\theta \\\\\\
 -\frac{1}{a} & \frac{1}{a} \\\\
 \end{pmatrix}
 \begin{pmatrix}
@@ -204,7 +204,7 @@ rw_L \\\\ rw_R
 \frac{r}{2}
 \begin{pmatrix}
 cos\theta & cos\theta \\\\\\
-sin\theta & sin\theta \\\\
+sin\theta & sin\theta \\\\\\
 -\frac{1}{a} & \frac{1}{a} \\\\
 \end{pmatrix}
 \begin{pmatrix}
