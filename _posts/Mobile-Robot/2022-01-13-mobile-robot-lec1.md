@@ -10,7 +10,7 @@ tag:
   - Mobile Robot
   - Kinematics
 use_math: true
-last_modified_at: 2022-01-13T13:30-14:00
+last_modified_at: 2022-01-13T00:30-01:00
 ---
 
 > 본 포스팅은 양정연 교수님의 SLAM 수업을 Reference로 공부한 내용을 정리한 것입니다.
@@ -38,6 +38,7 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 
 # Mobile Robot Kinematics
 
+## Translation
 다음과 같이 간단한 2-Wheel Mobile Robot을 가정해보자.
 
 ![2wheelrobot_diagram](/assets/images/mobile-robot-lec1/2wheelrobot_diagram.PNG)
@@ -45,4 +46,24 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 로봇의 중심을 기준으로 좌우, 같은 간격으로 두 개의 바퀴가 위치한다. 이 로봇은 이동할 때 두 바퀴를 굴려 이동할 것이다. 이때 두 바퀴의 선속도를 각각 $v_L, v_R$로 정의했다. 그렇다면 로봇 자체의 선속도는 두 바퀴 선속도의 평균으로 다음과 같이 정의될 것이다.
 
 <center> $v=\frac{v_L+v_R}{2}$ </center>
+
+## Rotation
+위 그림과 같은 모바일 로봇은 두 바퀴의 선속도를 다르게 하여 회전 운동을 할 수 있다. 이는 딱히 설명하지 않아도 당연한 것으로 생각된다. 이제는 로봇의 회전속도를 구해볼 필요가 있다. 먼저 다음의 회전속도와 선속도의 기본 공식을 알고 있어야 한다.
+
+<center> $v=r\times w$ </center>
+
+이제 로봇이 회전하는 순간을 도식화하여 그려보자.
+
+![2wheelrobot_diagram2](/assets/images/mobile-robot-lec1/2wheelrobot_diagram2.PNG)
+
+강의자료에서는 로봇의 회전 중심을 $ICC(Instantaneous Center of Curvature)$로 명시했다. 로봇이 $ICC$를 중심으로 회전할 때 양측 바퀴에 위에서 언급한 $v=r\times w$ 식을 적용하면 다음과 같이 로봇의 회전속도 $w$를 도출할 수 있다.
+
+<center> v_L=(R-a)\times w, v_R=(R+a)\times w<br>
+         \frac{v_L}{w}+a=\frac{v_R}{w}-a=R<br>
+         2a=\frac{v_R-v_L}{w}<br>
+         \therefore w=\frac{v_R-v_L}{2a} </center>
+
+이제 로봇의 병진속도(**Translation**)와 회전속도(**Rotation**)를 알 수 있다.
+
+
 
