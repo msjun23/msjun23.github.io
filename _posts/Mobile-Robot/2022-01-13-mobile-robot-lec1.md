@@ -256,7 +256,6 @@ d\theta_L \\\\ d\theta_R
 ![RTR_Translation](/assets/images/mobile-robot-lec1/RTR_Translation.PNG)
 
 ### 5.2 Inverse Kinematics with optimality
-
 또 다른 방법은 변수들의 독립성을 고려하여 자코비안 행렬을 나눠보는 것이다. $\dot{x}$와 $\dot{y}$는 서로 종속성이 있는 변수들이므로, $\dot{x}$와 $\dot{\theta}$를 선택해 다음과 같이 나눈다. 이때 우변에 곱해지는 자코비안 행렬의 일부를 $B$라고 정의하면, 이 행렬은 $2\times 2$ 이므로 역행렬을 구할 수 있다.
 
 ![Inverse_Kinematics](/assets/images/mobile-robot-lec1/Inverse_Kinematics.PNG)
