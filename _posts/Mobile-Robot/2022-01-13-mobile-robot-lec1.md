@@ -1,16 +1,16 @@
 ---
-title: "Mobile Robot Lec1 Kinematics"
+title: "[Lecture 1] Mobile Robot Kinematics"
 excerpt: "About Mobile Robot Kinematics"
 toc: true
 toc_sticky: true
 categories:
-  - Mobile Robot Study
+  - Mobile Robot
 tag:
   - Study
   - Mobile Robot
   - Kinematics
 use_math: true
-last_modified_at: 2022-01-13T00:30-01:00
+last_modified_at: 2022-01-13T13:30-14:00
 ---
 
 > 본 포스팅은 양정연 교수님의 SLAM 수업을 Reference로 공부한 내용을 정리한 것입니다.
@@ -45,5 +45,4 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 로봇의 중심을 기준으로 좌우, 같은 간격으로 두 개의 바퀴가 위치한다. 이 로봇은 이동할 때 두 바퀴를 굴려 이동할 것이다. 이때 두 바퀴의 선속도를 각각 $v_L, v_R$로 정의했다. 그렇다면 로봇 자체의 선속도는 두 바퀴 선속도의 평균으로 다음과 같이 정의될 것이다.
 
 <center> $v=\frac{v_L+v_R}{2}$ </center>
-
 
