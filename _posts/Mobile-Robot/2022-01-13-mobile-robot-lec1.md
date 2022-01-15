@@ -135,7 +135,7 @@ w
 \begin{pmatrix}
 cos\theta & 0 \\\\\\
 sin\theta & 0 \\\\
-0 & 1 \\
+0 & 1 \\\\
 \end{pmatrix}
 \begin{pmatrix}
 v \\\\ w
@@ -146,14 +146,56 @@ v \\\\ w
 $ \dot{X}=
 \begin{pmatrix}
 \dot{x} \\\\\\
-\dot{y} \\\\ 
+\dot{y} \\\\
 \dot{\theta}
 \end{pmatrix}=
 \begin{pmatrix}
 vcos\theta \\\\\\
-vsin\theta \\\\ 
+vsin\theta \\\\
 w
-\end{pmatrix}=$
+\end{pmatrix}=
+\begin{pmatrix}
+cos\theta & 0 \\\\\\
+sin\theta & 0 \\\\
+0 & 1 \\\\
+\end{pmatrix}
+\begin{pmatrix}
+v \\\\ w
+\end{pmatrix}=
+\begin{pmatrix}
+cos\theta & 0 \\\\\\
+sin\theta & 0 \\\\
+0 & 1 \\\\
+\end{pmatrix}
+\begin{pmatrix}
+\frac{v_L+v_R}{2} \\\\\\
+\frac{v_R-v_L}{2a}
+\end{pmatrix}=
+\begin{pmatrix}
+cos\theta & 0 \\\\\\
+sin\theta & 0 \\\\
+0 & 1 \\\\
+\end{pmatrix}
+\begin{pmatrix}
+\frac{1}{2} & \frac{1}{2} \\\\\\
+\frac{-1}{2a} & \frac{1}{2a} \\\\
+\end{pmatrix}
+\begin{pmatrix}
+v_L \\\\ v_R
+\end{pmatrix}=
+\frac{1}{2}
+\begin{pmatrix}
+cos\theta & cos\theta \\\\\\
+sin\theta & sin\theta \\\\
+-\frac{1}{a} & \frac{1}{a} \\\\
+\end{pmatrix}
+\begin{pmatrix}
+v_L \\\\ v_R
+\end{pmatrix}$
+
+
+
+
 
 
 
