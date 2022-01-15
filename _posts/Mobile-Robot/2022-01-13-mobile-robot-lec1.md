@@ -86,17 +86,21 @@ Inertia나 Wheel dynamics, 제어 이론 등은 본 강의에서 많은 시간�
 
 $ \begin{pmatrix}
 v
- \\\\
+ \\\\\\
 w
-\end{pmatrix}=\begin{pmatrix}
-\frac{1}{2} & \frac{1}{2} \\\\
-\frac{-1}{2a} & \frac{1}{2a} \\\\
-\end{pmatrix}\begin{pmatrix}
+\end{pmatrix}=
+\begin{pmatrix}
+\frac{1}{2} & \frac{1}{2} \\\\\\
+\frac{-1}{2a} & \frac{1}{2a} \\\\\\
+\end{pmatrix}
+\begin{pmatrix}
 v_L \\\\ v_R
-\end{pmatrix}=r\begin{pmatrix}
-\frac{1}{2} & \frac{1}{2} \\\\
-\frac{-1}{2a} & \frac{1}{2a} \\\\
-\end{pmatrix}\begin{pmatrix}
+\end{pmatrix}=r
+\begin{pmatrix}
+\frac{1}{2} & \frac{1}{2} \\\\\\
+\frac{-1}{2a} & \frac{1}{2a} \\\\\\
+\end{pmatrix}
+\begin{pmatrix}
 w_L \\\\ w_R
 \end{pmatrix} $
 
@@ -131,7 +135,7 @@ sin\theta & 0 \\\\
 v \\\\ w
 \end{pmatrix} $
 
-
+여기서 우변의 $v, w$는 위 식에서 양측 바퀴의 각속도로 얻을 수 있음을 보였다. 이를 모두 정리하면 다음과 같다.
 
 
 
