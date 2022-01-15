@@ -109,7 +109,7 @@ w_L \\\\ w_R
 ## 4. Jacobian
 ![2wheelrobot_coordinate](/assets/images/mobile-robot-lec1/2wheelrobot_coordinate.PNG)
 
-먼저 로봇의 속도는 다음과 같이 $x$축, $y$축으로 분해하여 표현 가능하다.
+위에서 구한 식을 좌표계에서 보이기 위해 재구성할 필요가 있다. 먼저 로봇의 속도는 다음과 같이 $x$축, $y$축으로 분해하여 표현 가능하다.
 <center> $ v_x=vcos\theta $ </center>
 <center> $ v_y=vsin\theta $ </center>
 
@@ -227,8 +227,35 @@ sin\theta & sin\theta \\\\\\
 w_L \\\\ w_R
 \end{pmatrix} $
 
+앞선 식과 동일하게 좌우 바퀴의 각속도를 조절하여 로봇의 $x$축, $y$축 속도와 회전 속도를 제어할 수 있다는 결론이 나온다. 두 바퀴의 각속도를 입력으로 하여 로봇의 속도, 각속도 성분이 한 번의 행렬 곱을 통해 정의된다. 이때 이 행렬을 자코비안 행렬(Jacobian matrix)라 한다.
 
+$ J=\frac{r}{2}
+\begin{pmatrix}
+cos\theta & cos\theta \\\\\\
+sin\theta & sin\theta \\\\\\
+-\frac{1}{a} & \frac{1}{a} \\\\
+\end{pmatrix} $
 
+또한 이러한 자코비안 행렬을 통해 입력에 의한 출력을 얻어내는 것을 **Forward Kinematics**라 한다. 이상의 내용들을 정리하여 단순하게 표현하면 다음과 같다.
+
+$ dX=J\begin{pmatrix}
+d\theta_L \\\\ d\theta_R
+\end{pmatrix}=Jd\Theta $
+
+## 5. Inverse Kinematics
+사실상 우리가 원하는 것은 원하는 로봇의 pose 입력으로 주는 것이다. 로봇에게 목표 pose를 입력으로 주면, 로봇은 일련의 과정을 통해 해당 pose에 도달할 수 있도록 양측 바퀴를 제어해야 한다. 이는 앞에서 살펴본 내용과 정 반대이다. 즉, 양변에 자코비안 행렬의 역행렬을 곱해주면 원하는 결과를 얻을 수 있다는 것이다. 하지만 이미 알듯이 자코비안 행렬은 $3\times 2$ 행렬로 역행렬이 존재하지 않는다. 이러한 상황을 타개하기 위해 두 가지 방법이 존재한다.
+
+### 5.1 RTR Method
+먼저 간단한 방법으로 로봇의 움직임을 최소 단위로 나누어 실행하는 것이다.
+
+![RTR](/assets/images/mobile-robot-lec1/RTR.PNG)
+
+이 그림과 같이 주어진 목표로 향하기 위해 회전과 이동을 별개의 액션으로 수행하는 것이다. 회전 -> 이동 -> 회전과 같이 분리된 움직임을 수행한다면 두 바퀴의 각속도는 서로 같거나, 절대값이 같아져 소거되는 항이 생긴다. 이를 활용하면 다음과 같이 쉽게 양측 바퀴의 각속도를 구할 수 있다.
+
+![RTR_Rotation](/assets/images/mobile-robot-lec1/RTR_Rotation.PNG) | ![RTR_Translation](/assets/images/mobile-robot-lec1/RTR_Translation.PNG)
+---|---|
+
+### 5.2 Inverse Kinematics with optimality
 
 
 
