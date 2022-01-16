@@ -53,12 +53,12 @@ Gradient Descent를 하기 위해 기울기 함수를 표현하자면 아래와 
 
 추정된 로봇의 위치인 $X$에서 기울기에 비례하도록 오차를 빼 나가면서 *local minima*에 도달하는 것이다.
 
-이 방식을 Beacon-based Localization에 적용하면 다음과 같다. 먼저 기울기 함수 $f$는 아래와 같이 정의할 수 있다. 이때 $N$은 주변 beacon의 개수, $B_i$는 beacon의 위치(벡터), $d_i$는 $X$로부터 $B_i$까지의 추정 거리(Estimated Euclidean distance)이다. 동시에 아래 기울기 함수에서 $(||X-B_i||^2-d_i^2)$는 오차라고 볼 수 있을 것이다.
+이 방식을 Beacon-based Localization에 적용하면 다음과 같다. 먼저 기울기 함수 $f$는 아래와 같이 정의할 수 있다. 이때 $N$은 주변 beacon의 개수, $B_i$는 beacon의 위치(벡터), $d_i$는 $X$로부터 $B_i$까지의 추정 거리(Estimated Euclidean distance)이다. 동시에 아래 기울기 함수에서 $\Sigma$ 내부에 들어가는 것은 오차라고 볼 수 있을 것이다.
 
-<center> $ f=\sum_{i}^{N}(||X-B_i||^2-d_i^2)^2 $ </center>
+<center> $ f=\sum_{i}^{N}(||X-B_i||^2-d_i^2)^2 $ </center><br>
 
-<center> $ \triangledown f=\sum_{i}^{N}4(||X-B_i||^2-d_i^2)((x-B_{ix})\hat{i}+(y-B_{iy})\hat{j}) $ </center>
+<center> $ \triangledown f=\sum_{i}^{N}4(||X-B_i||^2-d_i^2)((x-B_{ix})\hat{i}+(y-B_{iy})\hat{j}) $ </center> <br>
 
-<center> Update: $ X \leftarrow X-4\alpha\sum_{i}^{N}(||X-B_i||^2-d_i^2)(X-B_i)^T\hat{u} $ </center>
+<center> Update: $ X \leftarrow X-4\alpha\sum_{i}^{N}(||X-B_i||^2-d_i^2)(X-B_i)^T\hat{u} $ </center><br>
 
 이러한 Beacon-based Localization은 실제 코드로 실험해보면 원하는 위치로 잘 찾아가는 것을 확인할 수 있다. 또한 주변 beacon의 개수가 많을 수록, 즉 위 식에서 $N$의 값이 클 수록 오차가 줄어드는 것을 할 수 있다. 하지만 한가지 염두해 두어야 하는것은, $f$의 값이 완벽한 0이 될 수는 없다는 것이다.
