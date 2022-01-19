@@ -27,12 +27,12 @@ Jetson TX2(벽돌)에 OS와 기타 개발 도구들을 설치하고자 한다. J
 
 그 다음으로 Jetpack 버전 등을 설정하고 Step 02로 넘어간다.
 
-![install0]()
+![install0](/assets/images/starting-jetson-tx2/install0.png)
 
 ## 2. STEP 02
-필요에 따라 라이브러리 등을 체크하고 STEP 03으로 넘어간다. 생각하기 귀찮을 때는 다 선택하면 된다.
+필요에 따라 라이브러리 등을 체크하고 STEP 03으로 넘어간다. 생각하기 귀찮을 때는 다 선택하면 된다. 그리고 하단의 체크 박스를 체크하면 STEP 03으로 넘어갈 수 있다.
 
-![install1]()
+![install1](/assets/images/starting-jetson-tx2/install1.png)
 
 ## 3. STEP 03-1
 우측 하단의 버튼을 클릭해 설치를 진행한다. 어느정도 시간이 지나면 다음과 같은 창이 뜰것이다.
@@ -81,6 +81,8 @@ TX2에서 설정을 마치면, 다시 Host PC로 돌아와 팝업 창의 빈 칸
 
 ## 5. + $\alpha$
 아마 설치를 진행하면서 failed가 뜰 수 있을 것이다.
+
+![failed](/assets/images/starting-jetson-tx2/failed.png)
 
 이런 경우는 당황하지 말고, TX2에서 터미널을 켠 다음
 ```
