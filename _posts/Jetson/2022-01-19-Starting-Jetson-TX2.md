@@ -17,6 +17,8 @@ last_modified_at: 2022-01-19T15:00-15:30
 - USB to 5pin cable
 
 # Installation
+[공식 Documentation](https://docs.nvidia.com/sdk-manager/install-with-sdkm-jetson/index.html#repair-uninstall-jetson)
+
 ## 0. SDK Manager
 Jetson TX2(벽돌)에 OS와 기타 개발 도구들을 설치하고자 한다. Jetson Nano와 다르게 SD 카드를 꽂아 부팅하는것이 아니라 Host PC와의 연결을 필요로 한다. Jetson Nano는 SD 카드에 Jetpack 이미지를 올려서 부팅하지만 Jetson TX2의 경우 일반 PC와 유사한 부팅 방식을 가진다. 그래서 첫 OS 설치 방법도 Nano와는 확연히 다르다. Jetson TX2를 시작하기 위해서 Host PC에 [NVIDIA 홈페이지](https://developer.nvidia.com/jetpack-sdk-46)의 SDK manager를 설치해야한다. 설치 방법은 그냥 프로그램 설치하듯이 클릭, 클릭하면 설치된다.
 
