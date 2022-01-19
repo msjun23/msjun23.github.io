@@ -26,17 +26,24 @@ ROS를 이용하는 가장 큰 이점 중 하나는 다양한 플랫폼을 하�
 -   마스터
 
 ```
-export ROS_IP={ip of master}
-export ROS_MASTER_URI=http://localhost:11311
-export ROS_HOSTNAME=$ROS_IP
+export ROS_IP=192.168.xx.xx     # My IP address
+export ROS_HOSTNAME=${ROS_IP}
+export ROS_MASTER_URI=http://${ROS_IP}:11311
 ```
 
 -   주변 기기
 
 ```
-export ROS_MASTER_URI=http://{ip of master}:11311
-export ROS_HOSTNAME={my ip}
+export ROS_IP=192.168.xx.xx     # My IP address
+export ROS_HOSTNAME=${ROS_IP}
+export ROS_MASTER_URI=http://192.168.xx.xx:11311    # Master IP address
 ```
+
+간단히 설명을 하자면 ROS_IP는 단순히 현재 나의 IP 주소를 변수로 저장한 것이다.
+
+ROS_HOSTNAME은 현재 기기의 IP 주소가 들어가야 한다. 그래서 현재 IP 주소를 일일이 쓰는 대신 앞에서 선언한 ${ROS_IP}를 써준 것이다.
+
+마지막으로 ROS_MASTER_URI는 roscore를 실행하는 마스터의 IP를 써줘야 한다. 마스터 기기의 경우 자신의 IP가 들어가면 되므로 ${ROS_IP}를 써주었다. 반면, 주변 기기의 경우에는 직접 마스터의 IP 주소를 써야한다.
 
 ## **\* ip 주소 확인**
 
