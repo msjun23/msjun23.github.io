@@ -1,10 +1,10 @@
 ---
-title: "Jetson Nano(ubuntu)에서 gcc 버전 변경하기"
+title: "[Nano] Jetson Nano(ubuntu)에서 gcc 버전 변경하기"
 excerpt: "Change gcc version at Jetson Nano(Ubuntu)"
 toc: true
 toc_sticky: true
 categories:
-  - Jetson Nano
+  - Jetson
 tag:
   - Jetson Nano
   - Ubuntu

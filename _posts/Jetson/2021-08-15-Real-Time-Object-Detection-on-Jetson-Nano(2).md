@@ -1,10 +1,10 @@
 ---
-title: "Real Time Object Detection on Jetson Nano(2)"
+title: "[Nano] Real Time Object Detection on Jetson Nano(2)"
 excerpt: "Object Detection with Jetson Nano"
 toc: true
 toc_sticky: true
 categories:
-  - Jetson Nano
+  - Jetson
 tag:
   - Jetson Nano
   - Deep Learning

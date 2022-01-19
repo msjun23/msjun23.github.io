@@ -1,10 +1,10 @@
 ---
-title: "Starting Jetson Nano"
+title: "[Nano] Starting Jetson Nano"
 excerpt: "Introduction to Jetson Nano"
 toc: true
 toc_sticky: true
 categories:
-  - Jetson Nano
+  - Jetson
 tag:
   - Jetson Nano
 last_modified_at: 2021-08-08T12:30-13:00
