@@ -44,17 +44,17 @@ Jetson TX2(벽돌)에 OS와 기타 개발 도구들을 설치하고자 한다. J
 
 좌측에서 두번째 버튼이 선에 가려져 안 보이지만, 총 네 개의 버튼이 있다. 좌측부터 순서대로 RESET, Volume, Recovery, Power 버튼이다.
 
-> 0. 팝업 창 1.번 항목에서 Manual Setup을 선택한다.
+> 0) 팝업 창 1.번 항목에서 Manual Setup을 선택한다.
 >
-> 1. Jetson TX2가 파워 잭만 연결되고 전원은 키지 않은 상태를 유지한다. Host PC와 TX2는 당연히 처음부터 USB 케이블로 연결되어 있는 상태일 것이다.
+> 1) Jetson TX2가 파워 잭만 연결되고 전원은 키지 않은 상태를 유지한다. Host PC와 TX2는 당연히 처음부터 USB 케이블로 연결되어 있는 상태일 것이다.
 >
-> 2. Recovery 버튼을 꾹 누르고 있는다.
+> 2) Recovery 버튼을 꾹 누르고 있는다.
 > 
 >> 2-1. Recovery 버튼을 누르는 동시에 Power 버튼을 한 번 눌렀다 때고,
 >>
 >> 2-2. Power 버튼 다음에 Reset 버튼을 눌렀다 땐다.
 >
-> 3. Recovery 버튼을 땐다.
+> 3) Recovery 버튼을 땐다.
 
 이제 TX2에 설치를 진행할 준비가 끝났다. Host PC에서 터미널을 키고 lsusb 명령을 통해 Host PC에 TX2가 연결된 것을 확인할 수 있을 것이다.
 
