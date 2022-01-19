@@ -7,6 +7,7 @@ categories:
   - Jetson
 tag:
   - Jetson TX2
+use_math: true
 last_modified_at: 2022-01-19T15:00-15:30
 ---
 
@@ -78,8 +79,13 @@ TX2에서 설정을 마치면, 다시 Host PC로 돌아와 팝업 창의 빈 칸
 ![install5](/assets/images/starting-jetson-tx2/install5.png)
 ![install6](/assets/images/starting-jetson-tx2/install6.png)
 
+## 5. + $\alpha$
+아마 설치를 진행하면서 failed가 뜰 수 있을 것이다.
 
+이런 경우는 당황하지 말고, TX2에서 터미널을 켠 다음
+```
+$ sudo apt update
+$ sudo apt upgrade
+```
 
-
-
-
+를 수행하면 된다. 아마 일부 설치가 failed로 끝났다면, SDK manager 우측 아래 버튼에 Retry가 뜰 것이다. TX2에서 패키지 업데이트를 해준 다음 Retry하면 설치가 잘 될 것이다.
