@@ -35,7 +35,7 @@ $ sudo nvpmodel -m 7
 ```
 ![mode7](/assets/images/Xavier-Power-System/mode7.png)
 
-# Fan mode
+# Fan Mode
 Jetson AGX Xavier의 팬 모드 또한 변경할 수 있다. 팬 모드에는 **quiet** 와 **cool** 모드 두 가지가 있다. 먼저 quiet모드는 일정 온도까지는 팬이 돌지 않다가 임계점을 넘어서면 팬이 돌기 시작한다. 다음으로 cool모드는 항시 팬이 돌며 온도를 낮게 유지해준다.
 
 처음 Xavier를 부팅했다면, default로 quiet 모드가 설정되어있어 팬이 돌지 않을 것이다. 팬이 항시 돌기를 원한다면 팬 모드를 바꿔야 한다.
