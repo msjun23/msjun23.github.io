@@ -51,3 +51,22 @@ $ reboot
 ```
 명령어를 통해 재부팅하면 SSD가 홈 디렉토리로 설정된 것을 확인할 수 있다.
 
+# Jetson-stats
+
+Jetson 보드의 성능을 확인할 수 있다. 윈도우의 작업관리자와 비슷하다.
+
+```
+$ sudo -H pip install -U jetson-stats
+```
+
+설치 후 reboot 해주면 적용이 완료된다.
+
+```
+$ jtop
+```
+
+위 명령어를 통해 아래와 같이 현재 Jetson 보드의 성능과 사용량을 확인할 수 있다. 추가적으로 Power mode나 fan mode 또한 변경 가능하다.
+
+![jtop](/assets/images/jetson-essential/jtop.png)
+
+
