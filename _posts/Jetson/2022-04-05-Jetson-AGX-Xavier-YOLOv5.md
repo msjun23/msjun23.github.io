@@ -115,7 +115,7 @@ $ git clone https://github.com/ultralytics/yolov5.git
 $ cd yolov5/
 ```
 
-Yolov5 테스트는 다음 코드로 쉽게 해 볼 수 있다.
+Yolov5 테스트는 다음 코드로 쉽게 해 볼 수 있다. 다음에 있는 입력 소스 중 원하는 입력 소스를 사용하면 된다. 추론 결과는 **yolov5/runs/detect/exp~/** 아래에 저장된다.
 ```bash
 python3 detect.py --source 0  # webcam
                           img.jpg  # image
