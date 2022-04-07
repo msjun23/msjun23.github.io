@@ -68,7 +68,7 @@ Jetson TX2(벽돌)에 OS와 기타 개발 도구들을 설치하고자 한다. J
 ![install3](/assets/images/starting-jetson-tx2/install3.png)
 
 ## 4. STEP 03-2
-설치를 진행하는 도중에 다음과 같으 팝업이 뜰것이다. 동시에 Jetson TX2에 연결된 모니터에 우분투 초기 설정 화면이 뜰것이다.
+설치를 진행하는 도중에 다음과 같은 팝업이 뜰 것이다. 동시에 Jetson TX2에 연결된 모니터에 우분투 초기 설정 화면이 뜰 것이다.
 
 ![install4](/assets/images/starting-jetson-tx2/install4.png)
 
