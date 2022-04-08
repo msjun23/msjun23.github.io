@@ -169,14 +169,14 @@ python3 export.py --weights yolov5s.pt --include engine
 
 위 스크립트를 실행하면 원하는 새로운 weight 파일을 얻을 수 있다. 사용하는 방법은 .pt 형식의 weight를 사용하는 것과 동일하다.
 ```bash
-python path/to/detect.py --weights yolov5s.pt                 # PyTorch
-                                   yolov5s.torchscript        # TorchScript
-                                   yolov5s.onnx               # ONNX Runtime or OpenCV DNN with --dnn
-                                   yolov5s.xml                # OpenVINO
-                                   yolov5s.engine             # TensorRT
-                                   yolov5s.mlmodel            # CoreML (MacOS only)
-                                   yolov5s_saved_model        # TensorFlow SavedModel
-                                   yolov5s.pb                 # TensorFlow GraphDef
-                                   yolov5s.tflite             # TensorFlow Lite
-                                   yolov5s_edgetpu.tflite     # TensorFlow Edge TPU
+python3 detect.py --weights yolov5s.pt                 # PyTorch
+                            yolov5s.torchscript        # TorchScript
+                            yolov5s.onnx               # ONNX Runtime or OpenCV DNN with --dnn
+                            yolov5s.xml                # OpenVINO
+                            yolov5s.engine             # TensorRT
+                            yolov5s.mlmodel            # CoreML (MacOS only)
+                            yolov5s_saved_model        # TensorFlow SavedModel
+                            yolov5s.pb                 # TensorFlow GraphDef
+                            yolov5s.tflite             # TensorFlow Lite
+                            yolov5s_edgetpu.tflite     # TensorFlow Edge TPU
 ```
