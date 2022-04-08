@@ -62,7 +62,7 @@ ROS에서 사용할 메시지 토픽을 유니티에서도 사용하기 위해 �
 
 유니티 프로젝트 폴더 내의 /Assets/ 아래에 스크립트들을 저장할 Scripts 폴더를 만든다. Scripts 폴더 안에 다음 C# 코드를 저장한다. 파일 명은 튜토리얼과 동일하게 RosPublisherExample로 한다. 해당 내용은 [공식 튜토리얼](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/ros_unity_integration/publisher.md)에서 확인 가능하다.
 
-```C#
+```csharp
 using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using RosMessageTypes.UnityRoboticsDemo;
@@ -120,7 +120,7 @@ public class RosPublisherExample : MonoBehaviour
 # ROS -> Unity
 ROS에서 색상 정보를 publish하고 그에 따라 유니티의 객체 색이 변하는 예제이다. 위와 동일한 위치에 다음 C# 코드를 저장한다. 파일명은 RosSubscriberExample 로 한다. 이 또한 [공식 튜토리얼](https://github.com/Unity-Technologies/Unity-Robotics-Hub/blob/main/tutorials/ros_unity_integration/subscriber.md)에서 확인할 수 있다.
 
-```C#
+```csharp
 using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using RosColor = RosMessageTypes.UnityRoboticsDemo.UnityColorMsg;
