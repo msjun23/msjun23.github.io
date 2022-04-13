@@ -163,8 +163,10 @@ Jetson AGX Xavier의 기본 성능도 충분히 좋지만 보다 더 높은 성�
 
 [TFLite, ONNX, CoreML, TensorRT Export](https://github.com/ultralytics/yolov5/issues/251)
 
+마지막 인자인 --device는 gpu를 사용해 작업을 수행하겠다는 의미이다.
+
 ```bash
-python3 export.py --weights yolov5s.pt --include engine
+python3 export.py --weights yolov5s.pt --include engine --device 0
 ```
 
 위 스크립트를 실행하면 원하는 새로운 weight 파일을 얻을 수 있다. 사용하는 방법은 .pt 형식의 weight를 사용하는 것과 동일하다.
