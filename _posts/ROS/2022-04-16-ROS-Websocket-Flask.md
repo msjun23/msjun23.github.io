@@ -188,3 +188,6 @@ $ rostopic pub /listener std_msgs/String "Hello, World"
 ![console](/assets/images/ros-web/console.PNG)
 
 이렇게 새로고침 할 때마다 Hello, World! 가 콘솔에 출력되는 것을 볼 수 있다. 만약에 새로고침 없이 계속 반복적으로 값을 갱신하고 싶으면 ```listener.unsubscribe();``` 를 지우면 된다. 그리고 이 값들을 웹 페이지 내에 텍스트 박스 등을 통해서 이쁘게 띄우고 싶다면 구글링을 하면 된다.
+
+# 후기
+아 맞다. 이래하면 서울에서 뿌린거 부산에서 확인 못 하네요 ㅋㅋ 그 알아서 구글링해서 웹 콘솔 말고 페이지에 띄워야 확인 가능하지 그건 알아서들 합시다. 저도 아직 못했어요
