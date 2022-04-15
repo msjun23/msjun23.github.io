@@ -30,11 +30,10 @@ $ python3 -m pip install flask      # pip3 install flask
 위와 같이 간단한 설치를 마치고 다음 파이썬 파일을 생성한다. 보통 이름은 app.py로 하는 것 같다. 워크스페이스는 다음과 같이 만든다.
 ```bash
 └── Flask
-  ├── static
-  ├  └──
-  ├── templates
-  ├  └── subscriber.html
-  └── app.py
+    ├── static/
+    ├── templates
+    │   └── subscriber.html
+    └── app.py
 ``` 
 
 ```python
