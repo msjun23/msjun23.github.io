@@ -14,7 +14,7 @@ last_modified_at: 2022-04-15T11:00-11:30
 ---
 
 # Xsens MTi driver
-Xsens의 MTi-680G 센서를 사용해 GPS 정보를 ROS 상에서 확인해보고자 한다.
+Xsens의 MTi-680G 센서를 사용해 GPS와 IMU 정보를 ROS 상에서 확인해보고자 한다.
 
 ![ros-mti-680g](/assets/images/ros-mti-680g/mti680g.jpg)
 
