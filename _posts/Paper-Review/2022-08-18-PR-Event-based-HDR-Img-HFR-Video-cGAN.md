@@ -115,11 +115,11 @@ SBT가 가진 문제를 해결하기 위해 SBE에서는 일정한 개수만큼 
 
 그리고 blurring을 줄이기 위해 *L1* norm을 사용하는데 다음과 같이 정의된다.
 
-> $L_{L1}(G)=E_{e,g,\epsilon}[||g-G(e,\epsilon)||_1]$
+> $L_{L1}(G)=E_{e,g,\epsilon}[\|g-G(e,\epsilon)\|_1]$
 
 결과적으로 생성자는 다음과 같은 방향으로 학습을 진행하게 된다.
 
-> $G^*=arg\ min_G\ max_D[L_{cGAN}(G,D)+\lambda L_{L1}(G)]$
+> $G^*=arg\ \displaystyle\min_G\ \displaystyle\max_D[L_{cGAN}(G,D)+\lambda L_{L1}(G)]$
 
 생성자와 식별자를 모두 도식화하여 전체 네트워크 구조는 다음 *Figure 4*와 같다.
 
