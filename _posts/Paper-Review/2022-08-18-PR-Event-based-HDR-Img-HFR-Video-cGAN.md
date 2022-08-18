@@ -104,6 +104,28 @@ SBT가 가진 문제를 해결하기 위해 SBE에서는 일정한 개수만큼 
 ## Network architectures: cGANs
 
 ### Generator
+생성자는 *Figure 3* 과 같이 U-Net 구조에 skip-connection을 추가하여 구성한다. 그리고 입력 이미지의 경우, 앞선 Stacking 방법을 사용하여 임의의 채널 수를 가지도록 조절한다.
+
+![fig3](/assets/images/PR-Event-based-HDR-HFR/fig3.JPG)
+
+### Discriminator
+식별자의 경우 objective function은 다음과 같이 정의된다. 다음 식에서 $G, D$는 각각 생성자와 식별자를 의미하고, $e, g, \epsilon$은 원본 이벤트, 생성된 이미지, 그리고 generator에 추가되는 가우시안 노이즈이다.
+
+> $L_{cGAN}(G,D)=E_{e,g}[logD(e,g)]+E_{e,\epsilon}[log(1-D(e,G(e,\epsilon)))]$
+
+그리고 blurring을 줄이기 위해 *L1* norm을 사용하는데 다음과 같이 정의된다.
+
+> $L_{L1}(G)=E_{e,g,\epsilon}[||g-G(e,\epsilon)||_1]$
+
+결과적으로 생성자는 다음과 같은 방향으로 학습을 진행하게 된다.
+
+> $G^*=arg\ min_G\ max_D[L_{cGAN}(G,D)+\lambda L_{L1}(G)]$
+
+생성자와 식별자를 모두 도식화하여 전체 네트워크 구조는 다음 *Figure 4*와 같다.
+
+![fig4](/assets/images/PR-Event-based-HDR-HFR/fig4.JPG)
+
+
 
 
 
