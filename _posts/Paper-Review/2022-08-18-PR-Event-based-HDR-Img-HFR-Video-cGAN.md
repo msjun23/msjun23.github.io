@@ -1,6 +1,6 @@
 ---
 title: "[Event Camera] Event based HDR Image and HFR Video Generation using cGAN"
-excerpt: "How to generate HDR imgae and HFR video with event camera: using Conditional GAN"
+excerpt: "How to generate HDR imgae and HFR video from event camera: using Conditional GAN"
 toc: true
 toc_sticky: true
 categories:
@@ -56,9 +56,19 @@ cGANs은 주어진 이미지 $x$와 랜덤 노이즈 벡터 $z$를 사용하여 
 cGANs을 활용하기 위해, 이벤트 데이터를 바로 사용 가능하도록(off-the-shelf) 하기 위한 새로운 방법론을 제안하고, 학습 네트워크에 대한 내용이 이어진다.
 
 ## Event stacking: SBT vs. SBE
-먼저 이벤트 카메라를 통해 얻게되는 각각의 이벤트가 어떻게 표현되는지 알아야한다. 각각의 이벤트($e$)는 
+먼저 이벤트 카메라를 통해 얻게되는 각각의 이벤트가 어떻게 표현되는지 알아야한다. 각각의 이벤트($e$)는 네 가지 성분의 튜플로 표현된다.
 
+> $(u, v, t, p)$
+> 
+> $u, v: $ 픽셀 좌표
+>
+> $t: $ timestamp
+> 
+> $p = \pm1: $ 이벤트의 극성(polarity)
 
+이러한 이벤트 데이터들을 네트워크의 입력으로 만들기 위해 $p(u,v,t)$와 같이 3D 볼륨 형태로 stacking할 필요가 있다. 이벤트 카메라의 해상도를 $\delta t$, 이벤트를 쌓을 시간(time duration)을 $t_d$라 하고, 한 주기 동안 이벤트를 쌓는다면 그 깊이는 $n=t_d/\delta t$ 가 될 것이다. 즉 $n$채널의 이미지라고 볼 수 있다. 이러한 $n$채널 이미지는 한 주기 동안 발생한 모든 이벤트에 대한 정보를 담고 있다. 하지만 한 가지 문제점이 발생하는데, 바로 입력 이미지의 채널이 너무 커진다는 것이다.
+
+$t_d$를 $10ms$로 설정했을 시, 이벤트 카메라의 해상도(temporal resolution)은 $1\mu s$이므로 $n=10*10^{-3}/10^{-6}=10K$, 즉, 채널이 $10K$인 이미지가 된다.
 
 
 
