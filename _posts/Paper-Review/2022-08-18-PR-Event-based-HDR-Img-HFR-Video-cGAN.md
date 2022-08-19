@@ -125,6 +125,51 @@ SBT가 가진 문제를 해결하기 위해 SBE에서는 일정한 개수만큼 
 
 ![fig4](/assets/images/PR-Event-based-HDR-HFR/fig4.JPG)
 
+# Dataset
+데이터셋은 세 가지 그룹을 준비했다.
+> - Real-world의 이미지와 이벤트를 가지고 있는 공개 데이터셋
+>
+> - DAVIS 센서를 사용해 직접 제작한 데이터넷
+>
+> - 이벤트 카메라 시뮬레이터인 ESIM을 사용해 제작한 데이터셋
+
+이 중 ESIM 시뮬레이터를 사용한 데이터셋은 말 그대로 시뮬레이터이기 때문에 현실에서 발생하는 문제가 없기에, APS이미지를 그대로 GT로 활용할 수 있다. 하지만 현실의 데이터셋의 경우, APS에 모션 블러나 조명의 영향이 있기에 GT로 활용하기 어려운 부분이 있다.
+
+그래서 현실 데이터셋의 경우, 흑백 영역에 해당하는 이벤트들은 제외하고 사용한다고 논문에선 서술했다. 동시에 BRISQUE 점수를 활용하거나 육안으로 확인했을 때 블러링 된 APS 이미지는 training set에서 제외하도록 했다.
+
+# Experiment & Result
+현실 데이터셋을 학습하여 생성한 HDR 이미지들은 SSIM(Structure SIMilarity), FSIM(Feature SIMilarity), BRISQUE(Blind/Referenceless Image Spatial Quality Evaluator)를 사용해 평가했다고 한다.
+
+ESIM 데이터셋을 학습한 경우 SSIM, FSIM과 PSNR(Peak Signal to Noise Ratio)를 사용해 결과를 평가했다.
+
+SBT와 SBE를 사용하여 수행한 stacking 옵션은 아래 표와 같다.
+
+|   |SBT|   |SBE|
+|---|---|---|---|
+|**$\Delta t$**|0.03s|**# of event stack**|60K|
+|**# of frames($n$)**|3|
+
+이와 같이 학습을 수행하고 생성된 HDR의 결과는 *Figure 5* 와 같고, SBE에 대해서 정량적인 결과는 *Table 1* 과 같다.
+
+![fig5](/assets/images/PR-Event-based-HDR-HFR/fig5.png)
+
+눈으로 보기에도 SBE가 SBT보다 좋은 성능을 보이는 것을 확인할 수 있다.
+
+*Figure 6* 은 ESIM 데이터셋을 활용한 것이고, SBE 방식을 사용했다. Stacking 옵션은 위 실험과 같고, 여기서는 스택의 frame 수(입력 채널, $n$)을 변형해봤다.
+
+![fig6](/assets/images/PR-Event-based-HDR-HFR/fig6.png)
+![table2](/assets/images/PR-Event-based-HDR-HFR/table2.png)
+
+이 외에도 기존의 reconstruction 방법론과의 비교와 loss function에서 $L_1$ norm 텀을 추가했을 때와 하지 않았을 때의 결과 비교도 논문에서 확인할 수 있다.
+
+마지막으로 본 논문에서 제시한 방법론으로 생성한 HDR 이미지와 HFR 비디오의 결과 이미지로 리뷰를 마친다.
+
+![fig8](/assets/images/PR-Event-based-HDR-HFR/fig8.png)
+
+# Conclusion
+cGANs을 활용하여 이벤트 카메라 데이터로부터 HDR 이미지와 상당한 FPS을 가지는 HFR 비디오를 생성할 수 있음을 확인했다. 이벤트 카메라는 intro에서 언급한 것 처럼 기존의 카메라에선 불가능했던 이점을 가지고, 이를 적극적으로 활용할 수 있다면 vision 영역에 새로운 방향성을 열 수 있지 않을까 싶다.
+
+
 
 
 
