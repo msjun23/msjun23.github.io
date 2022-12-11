@@ -63,7 +63,7 @@ $ sudo docker version
 
 
 # Docker run
-Hello world는 국룰이다. 아래와 같이 두 가지 튜토리얼 도커파일을 실행시켜 보았다. 처음에는 두 도커파일이 존재하지 않기 때문에 자동적으로 [docker hub](https://hub.docker.com/)에서 받아와 실행할 것이다. 한 번 파일을 받은 이후부터는 local에 저장된 파일을 사용하기 때문에 따로 허브에서 불러올 필요가 없어진다.
+Hello world는 국룰이다. 아래와 같이 두 가지 튜토리얼 이미지 파일을 실행시켜 보았다. 처음에는 이미지 파일이 존재하지 않기 때문에 자동적으로 [docker hub](https://hub.docker.com/)에서 받아와 실행할 것이다. 한 번 파일을 받은 이후부터는 local에 저장된 파일을 사용하기 때문에 따로 허브에서 불러올 필요가 없어진다.
 
 ```bash
 $ sudo docker run hello-world
